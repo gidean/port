@@ -9,10 +9,9 @@ main
       .logo William Moran
       ul.nav
         li
-          routerLink( to="/") Home
+          NuxtLink( to="/") Home
         li Work
-        li
-          routerLink( to="/about") About
+        li About
         li Blog
         li CV 
       .tool-links 

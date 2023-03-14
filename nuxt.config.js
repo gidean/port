@@ -19,6 +19,20 @@ export default defineNuxtConfig({
   buildModules: [
     '@nuxtjs/style-resources',
   ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+  // /* Layout Transitions */
+  // layoutTransition: {
+  //   name: "fade",
+  //   mode: ""
+  // },
+  // /* Page Transitions */
+  // pageTransition: {
+  //   name: "fade",
+  //   mode: ""
+  // }
+  // layoutTransition: 'fade',
   // styleResources: {
   //   scss: [
   //     '@/src/assets/style/*.scss'

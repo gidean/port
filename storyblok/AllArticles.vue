@@ -3,12 +3,12 @@ main
   .container
     h3.h3-hero {{ blok.headline }}
     p.p-hero {{ blok.subHeading }}
-  .hero-articles
-    ArticleCard(v-for="article in articles"
-                :key="article.uuid"
-                :article="article.content"
-                :slug="article.full_slug")
-</template>
+    .hero-articles
+      ArticleCard(v-for="article in articles"
+                  :key="article.uuid"
+                  :article="article.content"
+                  :slug="article.full_slug")
+  </template>
 
 <script setup>
   defineProps({ blok: Object})
