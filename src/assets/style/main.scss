@@ -1,0 +1,18 @@
+;@import './reset.scss';
+;@import './base.scss';
+;@import './constants.scss';
+;@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
+
+
+
+#app {
+  margin: 32px 0;
+}
+
+.container {
+  max-width: calc(1216px + 32px);
+  margin: 16px auto;
+  padding: 0 16px;
+
+}
