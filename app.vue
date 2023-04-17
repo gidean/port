@@ -9,6 +9,15 @@ import MainNav from './components/MainNav.vue';
   MainNav
   NuxtLayout
     NuxtPage
+  .main-wrapper_lines
+    .main-wrapper_dotted-line
+    .main-wrapper_dotted-line
+    .main-wrapper_dotted-line
+    .main-wrapper_dotted-line
+    .main-wrapper_dotted-line
+    .main-wrapper_dotted-line
+    .main-wrapper_dotted-line
+    .main-wrapper_dotted-line
 </template>
 
 <style lang="scss">
@@ -32,8 +41,8 @@ import MainNav from './components/MainNav.vue';
 .flash {
   &.-witness-me  {
     background-color: #F2C075;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 300;
     text-align: center;
     padding: 16px 16px 32px 0;
     border-radius: 24px 24px 0 0;
@@ -69,6 +78,8 @@ body {
   margin: -36px 0 0 0;
   border-radius: 24px;
   min-height: 100vh;
+  position: relative;
+  z-index: 10;
 
 }
 

@@ -1,10 +1,7 @@
-<template>
-  <div v-editable="blok">
-    <h1> {{ blok.headline }}</h1>
-    <p> this is a teaser</p>
-
-  </div>
-
+<template lang="pug">
+div(v-editable='blok')
+  h1  {{ blok.headline }}
+  p  this is a teaser
 </template>
 
 <script setup>

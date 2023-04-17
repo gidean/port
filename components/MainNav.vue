@@ -1,5 +1,5 @@
 <template lang="pug">
-main
+nav
   .container
     .header__mobile
       .logo William Moran
@@ -15,8 +15,8 @@ main
         li Blog
         li CV 
       .tool-links 
-        .pill.-git Fork on github
-        .pill.-figma Get a figma copy
+        .pill.-git Hire me
+        //- .pill.-figma Get a figma copy
 
   div.mobile-menu(v-show="showMobMenu") 
     p main munu 
@@ -41,6 +41,14 @@ $grid-breakpoints-lg: 992px;
 $grid-breakpoints-xl: 1200px;
 $grid-breakpoints-xxl: 1400px;
 
+  nav {
+    border-bottom: 1px dashed #cbb4ee78;
+    .container {
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+  }
+  
   .header {
     &__desk{
     display: none;
@@ -58,6 +66,7 @@ $grid-breakpoints-xxl: 1400px;
       display: flex;
       list-style: none;
       gap: 40px;
+      align-items: center;
     }
   
     .tool-links {

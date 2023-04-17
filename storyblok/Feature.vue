@@ -1,9 +1,6 @@
-<template>
-  <div v-editable="blok">
-    <h1> {{ blok.name }}</h1>
-
-  </div>
-
+<template lang="pug">
+div(v-editable='blok')
+  h1  {{ blok.name }}
 </template>
 
 <script setup>

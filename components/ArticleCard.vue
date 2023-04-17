@@ -17,7 +17,7 @@ NuxtLink(:to="'/' + slug"
   defineProps({ article: Object, slug: String })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $grid-breakpoints-xs: 0;
 $grid-breakpoints-sm: 576px;
 $grid-breakpoints-md: 768px;
@@ -33,12 +33,15 @@ $grid-breakpoints-xxl: 1400px;
   position: relative;
   max-width: 380px;
   margin: 0 auto 40px;
-  background: #f0e68c99;
+  background: rgb(229 101 101 / 20%);
   border-radius: 16px;
   padding: 8px 8px 32px;
 
   .image {
     margin-bottom: 16px;
+    img {
+      width: 100%;
+    }
     .cate {
       background: rgba(black, .4);
       border-radius: 32pc;
@@ -55,14 +58,14 @@ $grid-breakpoints-xxl: 1400px;
   .text {
     padding: 0 8px;
     .title{
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 900;
       margin-bottom: 8px;
     }
 
     .desc {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 300;
     }
   }
 }

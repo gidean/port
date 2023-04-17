@@ -50,8 +50,8 @@ $grid-breakpoints-xxl: 1400px;
   }
 
   .h2 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 300;
     margin-bottom: 24px;
   }
 
@@ -85,6 +85,7 @@ $grid-breakpoints-xxl: 1400px;
     flex-direction: row;
     max-width: initial;
     text-align: left;
+    padding: 140px 0;
 
   .text {
     width: 50%;

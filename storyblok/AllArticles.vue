@@ -8,7 +8,7 @@ main
                   :key="article.uuid"
                   :article="article.content"
                   :slug="article.full_slug")
-  </template>
+</template>
 
 <script setup>
   defineProps({ blok: Object})
@@ -32,7 +32,7 @@ $grid-breakpoints-xl: 1200px;
 $grid-breakpoints-xxl: 1400px;
 
 .h3-hero {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 900;
     text-align: center;
     margin: 40px 0 24px; 
@@ -40,6 +40,7 @@ $grid-breakpoints-xxl: 1400px;
 
   .p-hero {
     font-size: 18px;
+    font-weight: 300;
     text-align: center;
     max-width: 800px;
     margin: 0 auto 40px;
