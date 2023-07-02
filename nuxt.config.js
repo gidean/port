@@ -1,15 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    ["@storyblok/nuxt", { 
-      accessToken: process.env.STORYBLOK_TOKEN,
-     }],
-    '@pinia/nuxt',
+    [
+      "@storyblok/nuxt",
+      {
+        accessToken: process.env.STORYBLOK_TOKEN,
+      },
+    ],
+    "@pinia/nuxt",
   ],
   hooks: {
-    'vite:extendConfig': (config, { isClient, isServer }) => {
-      if (isClient)
-        config.resolve.alias.vue = 'vue/dist/vue.esm-bundler.js'
+    "vite:extendConfig": (config, { isClient, isServer }) => {
+      if (isClient) config.resolve.alias.vue = "vue/dist/vue.esm-bundler.js";
     },
   },
   // vite: {
@@ -21,15 +23,11 @@ export default defineNuxtConfig({
   //     }
   //   }
   // },
-  css: [
-    '@/src/assets/style/main.scss',
-  ],
+  css: ["@/src/assets/style/main.scss"],
   // // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxtjs/style-resources',
-  ],
+  buildModules: ["@nuxtjs/style-resources"],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: "page", mode: "out-in" },
   },
   // plugins: ['~/plugins/highlightjs.js'],
   // /* Layout Transitions */

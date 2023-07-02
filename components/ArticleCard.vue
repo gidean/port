@@ -14,7 +14,7 @@ NuxtLink(:to="'/' + slug"
 </template>
 
 <script setup>
-  defineProps({ article: Object, slug: String })
+defineProps({ article: Object, slug: String });
 </script>
 
 <style lang="scss" scoped>
@@ -24,8 +24,7 @@ $grid-breakpoints-md: 768px;
 $grid-breakpoints-lg: 992px;
 $grid-breakpoints-xl: 1200px;
 $grid-breakpoints-xxl: 1400px;
-  .hero-articles {
-
+.hero-articles {
 }
 
 .article {
@@ -43,7 +42,7 @@ $grid-breakpoints-xxl: 1400px;
       width: 100%;
     }
     .cate {
-      background: rgba(black, .4);
+      background: rgba(black, 0.4);
       border-radius: 32pc;
       color: greenyellow;
       padding: 4px 8px;
@@ -57,7 +56,7 @@ $grid-breakpoints-xxl: 1400px;
 
   .text {
     padding: 0 8px;
-    .title{
+    .title {
       font-size: 18px;
       font-weight: 900;
       margin-bottom: 8px;
@@ -70,57 +69,49 @@ $grid-breakpoints-xxl: 1400px;
   }
 }
 
-@media screen and (min-width: $grid-breakpoints-sm) { 
+@media screen and (min-width: $grid-breakpoints-sm) {
   .hero-articles {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
   }
   .article {
     width: calc(50% - 12px);
-  .image {
-
-    .cate {
-
-    }
-  }
-
-  .text {
-    .title{
-
+    .image {
+      .cate {
+      }
     }
 
-    .desc {
+    .text {
+      .title {
+      }
 
+      .desc {
+      }
     }
   }
 }
-}
 
-@media screen and (min-width: $grid-breakpoints-md) { 
+@media screen and (min-width: $grid-breakpoints-md) {
   .hero-articles {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
   }
   .article {
     width: calc(25% - 18px);
-  .image {
+    .image {
+      .cate {
+      }
+    }
 
-    .cate {
+    .text {
+      .title {
+      }
 
+      .desc {
+      }
     }
   }
-
-  .text {
-    .title{
-
-    }
-
-    .desc {
-
-    }
-  }
-}
 }
 </style>

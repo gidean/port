@@ -31,13 +31,13 @@ main
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-import { Carousel, Pagination, Slide } from 'vue3-carousel'
+import { defineComponent } from "vue";
+import { Carousel, Pagination, Slide } from "vue3-carousel";
 
-import 'vue3-carousel/dist/carousel.css'
+import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
-  name: 'Autoplay',
+  name: "Autoplay",
   components: {
     Carousel,
     Slide,
@@ -48,13 +48,13 @@ export default defineComponent({
   }),
   methods: {
     next() {
-      this.$refs.carousel.next()
+      this.$refs.carousel.next();
     },
     prev() {
-      this.$refs.carousel.prev()
-    }
-  }
-})
+      this.$refs.carousel.prev();
+    },
+  },
+});
 </script>
 
 <style scoped>
@@ -116,9 +116,8 @@ export default defineComponent({
 }
 </style>
 
-
 <script setup>
-  defineProps({ blok: Object})
+defineProps({ blok: Object });
 </script>
 
 <style lang="scss">
@@ -130,7 +129,7 @@ $grid-breakpoints-xl: 1200px;
 $grid-breakpoints-xxl: 1400px;
 
 .showcase {
-  background-color: rgba(grey, .05);
+  background-color: rgba(grey, 0.05);
   margin: 0 auto;
   padding: 24px 0;
   border-radius: 24px;
@@ -145,7 +144,6 @@ $grid-breakpoints-xxl: 1400px;
     border: 1px black solid;
     border-radius: 4px;
     padding: 12px;
-
   }
 
   &__title {
@@ -155,7 +153,7 @@ $grid-breakpoints-xxl: 1400px;
   &__cate {
     display: flex;
     font-size: 12px;
-    opacity: .75;
+    opacity: 0.75;
     align-items: center;
 
     .bar {
@@ -168,7 +166,7 @@ $grid-breakpoints-xxl: 1400px;
   }
   &__desc {
     font-size: 16px;
-    opacity: .75;
+    opacity: 0.75;
     font-weight: 300;
   }
 }
@@ -179,7 +177,7 @@ $grid-breakpoints-xxl: 1400px;
 
     &__image {
       order: 1;
-        max-width: 50%;
+      max-width: 50%;
     }
 
     &__title {
@@ -189,7 +187,6 @@ $grid-breakpoints-xxl: 1400px;
       font-size: 14px;
 
       .bar {
-
       }
     }
     &__desc {
@@ -197,6 +194,4 @@ $grid-breakpoints-xxl: 1400px;
     }
   }
 }
-
-
 </style>

@@ -9,16 +9,18 @@
     img(:src="blok.image.filename + '/m/1600x0'", :alt='blok.image.alt', class='hero')
     Vue3RuntimeTemplate(:template="resolvedRichText")
 </template>
- 
+
 <script setup>
-  import Vue3RuntimeTemplate from "vue3-runtime-template"
-  const props = defineProps({ blok: Object })
-  console.log(props.blok)
-  const resolvedRichText = computed(() => renderRichText(props.blok.content, {
+import Vue3RuntimeTemplate from "vue3-runtime-template";
+const props = defineProps({ blok: Object });
+console.log(props.blok);
+const resolvedRichText = computed(() =>
+  renderRichText(props.blok.content, {
     resolver: (component, blok) => {
-      return `<component :blok='${JSON.stringify(blok)}' is="${component}" />`
+      return `<component :blok='${JSON.stringify(blok)}' is="${component}" />`;
     },
-  }))
+  })
+);
 </script>
 
 <style lang="scss">
@@ -36,7 +38,7 @@
   .author-blok {
     font-size: 14px;
     font-weight: 300;
-    opacity: .65;
+    opacity: 0.65;
   }
 
   .category {
@@ -57,14 +59,13 @@
   .desc {
     font-size: 16px;
     font-weight: 300;
-    opacity: .65;
+    opacity: 0.65;
     margin: 0;
   }
 
   .hero {
     margin: 0 0 24px;
   }
-
 
   blockquote {
     color: #f7fafc;
@@ -74,13 +75,17 @@
     margin: 32px 0 16px;
   }
 
-
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 32px 0 16px;
     p,
     b {
-    font-size: 20px;
-    font-weight: 900;
+      font-size: 20px;
+      font-weight: 900;
     }
   }
 

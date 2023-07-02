@@ -6,7 +6,7 @@ div.full-art(v-editable='blok')
 </template>
 
 <script setup>
-  const props = defineProps({ blok: Object })
-  
-  const resolvedRichText = computed(() => renderRichText(props.blok.content))
+const props = defineProps({ blok: Object });
+
+const resolvedRichText = computed(() => renderRichText(props.blok.content));
 </script>

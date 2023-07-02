@@ -3,13 +3,11 @@
     <StoryblokComponent
       v-for="blok in blok.columns"
       :key="blok._uid"
-      :blok="blok"  
+      :blok="blok"
     />
-
   </div>
-
 </template>
 
 <script setup>
-  defineProps({ blok: Object})
+defineProps({ blok: Object });
 </script>

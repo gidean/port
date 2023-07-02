@@ -3,16 +3,12 @@ export default {
     rules: [
       {
         test: /\.pug$/,
-        loader: 'pug-plain-loader',
+        loader: "pug-plain-loader",
       },
       {
         test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader',
-        ]
-      }
-    ]
-  }
-}
+        use: ["vue-style-loader", "css-loader", "sass-loader"],
+      },
+    ],
+  },
+};

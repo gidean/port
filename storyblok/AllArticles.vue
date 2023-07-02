@@ -11,16 +11,16 @@ main
 </template>
 
 <script setup>
-  defineProps({ blok: Object})
+defineProps({ blok: Object });
 
-  const articles = ref(null)
-  const storyblokApi = useStoryblokApi()
-  const { data } = await storyblokApi.get('cdn/stories', {
-    version: useRoute().query._storyblok ? 'draft' : 'published',
-    starts_with: 'blog',
-    is_startpage: false
-  })
-  articles.value = data.stories
+const articles = ref(null);
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get("cdn/stories", {
+  version: useRoute().query._storyblok ? "draft" : "published",
+  starts_with: "blog",
+  is_startpage: false,
+});
+articles.value = data.stories;
 </script>
 
 <style lang="scss">
@@ -32,33 +32,33 @@ $grid-breakpoints-xl: 1200px;
 $grid-breakpoints-xxl: 1400px;
 
 .h3-hero {
-    font-size: 24px;
-    font-weight: 900;
-    text-align: center;
-    margin: 40px 0 24px; 
-  }
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  margin: 40px 0 24px;
+}
 
-  .p-hero {
-    font-size: 18px;
-    font-weight: 300;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
-  }
+.p-hero {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
 
-@media screen and (min-width: $grid-breakpoints-sm) { 
+@media screen and (min-width: $grid-breakpoints-sm) {
   .hero-articles {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
   }
 }
 
-@media screen and (min-width: $grid-breakpoints-md) { 
+@media screen and (min-width: $grid-breakpoints-md) {
   .hero-articles {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
   }
 }
 </style>

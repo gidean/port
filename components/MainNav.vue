@@ -22,17 +22,17 @@ nav
     p main munu 
     div(@click="showMobMenu = !showMobMenu") close me
 </template>
-  
+
 <script>
-  export default {
-    data: function () {
-      return {
-        showMobMenu: false,
-      };
-    },
-  };
+export default {
+  data: function () {
+    return {
+      showMobMenu: false,
+    };
+  },
+};
 </script>
-  
+
 <style lang="scss">
 $grid-breakpoints-xs: 0;
 $grid-breakpoints-sm: 576px;
@@ -41,23 +41,23 @@ $grid-breakpoints-lg: 992px;
 $grid-breakpoints-xl: 1200px;
 $grid-breakpoints-xxl: 1400px;
 
-  nav {
-    border-bottom: 1px dashed #cbb4ee78;
-    .container {
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+nav {
+  border-bottom: 1px dashed #cbb4ee78;
+  .container {
+    margin: 0 auto;
+    padding: 0 24px;
   }
-  
-  .header {
-    &__desk{
+}
+
+.header {
+  &__desk {
     display: none;
     justify-content: space-between;
     padding: 24px 0;
-  
+
     @media screen and (min-width: $grid-breakpoints-lg) {
-        display: flex;
-      }
+      display: flex;
+    }
     .logo {
       font-size: 20px;
       font-weight: 900;
@@ -68,54 +68,52 @@ $grid-breakpoints-xxl: 1400px;
       gap: 40px;
       align-items: center;
     }
-  
+
     .tool-links {
       display: flex;
       gap: 24px;
     }
   }
-  
+
   &__mobile {
     display: flex;
     justify-content: space-between;
     padding: 24px 0;
-  
+
     @media screen and (min-width: $grid-breakpoints-lg) {
-        display: none;
-      }
+      display: none;
+    }
   }
+}
+
+.pill {
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 16px;
+  color: white;
+  display: inline-flex;
+
+  &.-git {
+    background: black;
   }
-  
-  .pill {
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 8px 16px;
+
+  &.-figma {
+    background: #8367c7;
+  }
+
+  &.-vue {
+    background: #39b982;
     color: white;
-    display: inline-flex ;
-  
-    &.-git{
-      background: black;
-    }
-  
-    &.-figma{
-      background: #8367C7;
-    }
-  
-    &.-vue {
-      background: #39b982;
-      color: white;
-    }
   }
-  
-  .mobile-menu {
-    background: white;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-  }
-  
-  </style>
-  
+}
+
+.mobile-menu {
+  background: white;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+</style>
