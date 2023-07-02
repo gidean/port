@@ -7,15 +7,15 @@ nav
         //- font-awesome-icon(@click="showMobMenu = !showMobMenu" icon="fas fa-bars-staggered")
     .header__desk
       .logo William Moran
-      ul.nav
-        li
-          NuxtLink( to="/") Home
-        li Work
-        li About
-        li Blog
-        li CV 
-      .tool-links 
-        .pill.-git Hire me
+      //- ul.nav
+      //-   li
+      //-     NuxtLink( to="/") Home
+      //-   li Work
+      //-   li About
+      //-   li Blog
+      //-   li CV 
+      //- .tool-links 
+      //-   .pill.-git Hire me
         //- .pill.-figma Get a figma copy
 
   div.mobile-menu(v-show="showMobMenu") 
@@ -89,7 +89,7 @@ $grid-breakpoints-xxl: 1400px;
   .pill {
     border-radius: 50px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 8px 16px;
     color: white;
     display: inline-flex ;
@@ -99,7 +99,7 @@ $grid-breakpoints-xxl: 1400px;
     }
   
     &.-figma{
-      background: purple;
+      background: #8367C7;
     }
   
     &.-vue {

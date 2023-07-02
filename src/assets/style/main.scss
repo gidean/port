@@ -6,15 +6,24 @@
 
 
 
-#__nuxt {
-  margin: 32px 0;
-}
+// #__nuxt {
+//   margin: 32px 0;
+// }
 
 .container {
   max-width: calc(1216px + 32px);
   margin: 16px auto;
   padding: 0 24px;
 
+}
+
+@keyframes heightLines {
+	from {
+		height: 0%;
+	}
+	to {
+		height: 100%;
+	}
 }
 
 .main-wrapper_lines {
@@ -40,8 +49,8 @@
 }
 
 .main-wrapper_dotted-line {
-  height: 100%;
-  border: 1px dashed #cbb4ee78;
+  height: 0%;
+  border: 1px dashed #DBE0F0;
   /* background-image: linear-gradient(#cebcff 33%, rgba(255, 255, 255, 0) 0%); */
   /* background-position: unset; */
   /* background-size: 1px 16px; */
@@ -50,4 +59,17 @@
   width: inherit;
   border-bottom: none;
   border-top: none;
+
+  animation: 1s ease-out 0s 1 heightLines;
+  animation-fill-mode: forwards;  
+}
+
+$counter: 0.25;
+
+@for $i from 1 through 8 {
+  $counter: $counter + 0.15;
+
+  .animate-#{$i} {
+    animation-delay: $counter + s;
+  }
 }
